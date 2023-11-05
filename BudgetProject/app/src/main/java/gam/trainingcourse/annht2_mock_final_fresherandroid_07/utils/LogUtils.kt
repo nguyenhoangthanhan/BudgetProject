@@ -1,6 +1,5 @@
 package gam.trainingcourse.annht2_mock_final_fresherandroid_07.utils
 import android.util.Log
-import androidx.viewbinding.BuildConfig
 
 /**
  * Define Logcat for all module.
@@ -8,7 +7,7 @@ import androidx.viewbinding.BuildConfig
  */
 object LogUtils {
 
-    private var DEBUG = BuildConfig.DEBUG
+    private var DEBUG = true
 
     private const val TRACE_METHOD = "trace"
 

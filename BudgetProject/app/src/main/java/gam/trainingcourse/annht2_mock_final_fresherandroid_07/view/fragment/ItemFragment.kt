@@ -21,9 +21,11 @@ import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 
 import android.animation.ObjectAnimator
+import dagger.hilt.android.AndroidEntryPoint
 
 private const val ITEM_BUDGET_PARAM = "itemBudget"
 
+@AndroidEntryPoint
 class ItemFragment : Fragment() {
     private var cardViewItem: CardView? = null
     private var tvItemSpending: TextView? = null

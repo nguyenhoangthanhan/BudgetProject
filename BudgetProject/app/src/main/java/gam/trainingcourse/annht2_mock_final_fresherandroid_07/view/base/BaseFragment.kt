@@ -7,8 +7,12 @@ import android.view.ViewGroup
 import androidx.annotation.CallSuper
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.WithFragmentBindings
 import java.lang.IllegalStateException
 
+@AndroidEntryPoint
+@WithFragmentBindings
 abstract class BaseFragment<out T : ViewBinding> : Fragment() {
 
     private var _biding: T? = null

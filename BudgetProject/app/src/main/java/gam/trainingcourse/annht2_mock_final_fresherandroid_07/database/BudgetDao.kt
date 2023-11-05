@@ -13,8 +13,8 @@ interface BudgetDao {
     fun getAllStoredBudget(): Flow<List<Budget>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertBudget(budget: Budget)
+    fun insertBudget(budget: Budget)
 
     @Query("UPDATE ${Constant.NAME_OF_BUDGET_TABLE} SET ${Constant.BUDGET_SPENDING} = :spending WHERE ${Constant.BUDGET_ID} = :id")
-    suspend fun updateSpendingBudgetById(spending: Long, id: Long)
+    fun updateSpendingBudgetById(spending: Long, id: Long)
 }
